@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BalooBhaina2-Bold.ttf">
+            <string>BalooBhaina2-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="345" id="KGk-i7-Jjw" customClass="FanArtTableViewCell" customModule="LAS_ANIME_004" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="448" height="238"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="448" height="238"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oshi no ko" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tN-XJ-9Kp">
+                        <rect key="frame" x="20" y="5" width="84" height="17"/>
+                        <fontDescription key="fontDescription" name="BalooBhaina2-Bold" family="Baloo Bhaina 2" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgo-qJ-xZ5">
+                        <rect key="frame" x="365" y="-1.6666666666666661" width="70" height="30.333333333333329"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_next" translatesAutoresizingMaskIntoConstraints="NO" id="gWZ-SF-EWI">
+                                <rect key="frame" x="50" y="7.3333333333333339" width="20" height="12.000000000000002"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="CNs-VA-fTk"/>
+                                    <constraint firstAttribute="width" constant="20" id="pl1-y7-X7P"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsa-Eg-rcL">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="30.333333333333332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="QUl-GC-sEv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BalooBhaina2-Bold" family="Baloo Bhaina 2" pointSize="14"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRv-jS-Rtt">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="30.333333333333332"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gWZ-SF-EWI" secondAttribute="trailing" id="0My-NB-wog"/>
+                            <constraint firstAttribute="bottom" secondItem="hRv-jS-Rtt" secondAttribute="bottom" id="8gs-EQ-6XG"/>
+                            <constraint firstItem="gWZ-SF-EWI" firstAttribute="centerY" secondItem="Hsa-Eg-rcL" secondAttribute="centerY" constant="-2" id="FHK-L9-HCj"/>
+                            <constraint firstAttribute="bottom" secondItem="Hsa-Eg-rcL" secondAttribute="bottom" id="GQg-qS-5kZ"/>
+                            <constraint firstItem="hRv-jS-Rtt" firstAttribute="top" secondItem="Sgo-qJ-xZ5" secondAttribute="top" id="IY6-9k-NZM"/>
+                            <constraint firstItem="gWZ-SF-EWI" firstAttribute="leading" secondItem="Hsa-Eg-rcL" secondAttribute="trailing" id="Y4f-Ux-8oL"/>
+                            <constraint firstItem="Hsa-Eg-rcL" firstAttribute="leading" secondItem="Sgo-qJ-xZ5" secondAttribute="leading" id="j9R-ZR-bhj"/>
+                            <constraint firstItem="Hsa-Eg-rcL" firstAttribute="top" secondItem="Sgo-qJ-xZ5" secondAttribute="top" id="nE5-hk-tfA"/>
+                            <constraint firstItem="hRv-jS-Rtt" firstAttribute="leading" secondItem="Sgo-qJ-xZ5" secondAttribute="leading" id="vyQ-WK-oFU"/>
+                            <constraint firstAttribute="trailing" secondItem="hRv-jS-Rtt" secondAttribute="trailing" id="xbR-kw-4CW"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpi-bj-FOz">
+                        <rect key="frame" x="20" y="27" width="1" height="211"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="p7C-Pl-dSt"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Rl8-vA-05Y">
+                        <rect key="frame" x="31" y="27" width="417" height="185"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="185" id="XWp-r5-gYU"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GAj-oD-4Ea">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Cpi-bj-FOz" secondAttribute="bottom" id="0lP-Gw-Lbi"/>
+                    <constraint firstAttribute="trailing" secondItem="Rl8-vA-05Y" secondAttribute="trailing" id="3Eo-N5-rNH"/>
+                    <constraint firstItem="Cpi-bj-FOz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="9hW-fj-pCc"/>
+                    <constraint firstItem="Cpi-bj-FOz" firstAttribute="top" secondItem="4tN-XJ-9Kp" secondAttribute="bottom" constant="5" id="AUr-SU-hCN"/>
+                    <constraint firstItem="Sgo-qJ-xZ5" firstAttribute="centerY" secondItem="4tN-XJ-9Kp" secondAttribute="centerY" id="DPk-7N-2Fg"/>
+                    <constraint firstItem="4tN-XJ-9Kp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="SyD-hg-ObX"/>
+                    <constraint firstItem="4tN-XJ-9Kp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="WGk-0X-1VR"/>
+                    <constraint firstItem="Sgo-qJ-xZ5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4tN-XJ-9Kp" secondAttribute="trailing" constant="20" id="aqF-Eg-YQX"/>
+                    <constraint firstAttribute="bottom" secondItem="Rl8-vA-05Y" secondAttribute="bottom" constant="26" id="bAe-VN-c0K"/>
+                    <constraint firstAttribute="trailing" secondItem="Sgo-qJ-xZ5" secondAttribute="trailing" constant="13" id="csP-et-HF2"/>
+                    <constraint firstItem="Rl8-vA-05Y" firstAttribute="top" secondItem="Cpi-bj-FOz" secondAttribute="top" id="exk-Dh-iZA"/>
+                    <constraint firstItem="Rl8-vA-05Y" firstAttribute="leading" secondItem="Cpi-bj-FOz" secondAttribute="trailing" constant="10" id="jGE-LX-Lli"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="artCollectionView" destination="Rl8-vA-05Y" id="6Cw-pY-Twb"/>
+                <outlet property="categoryLabel" destination="4tN-XJ-9Kp" id="bx2-ab-yA0"/>
+                <outlet property="seeAllButton" destination="hRv-jS-Rtt" id="We4-Qu-iVS"/>
+                <outlet property="viewAllLabel" destination="Hsa-Eg-rcL" id="vVg-re-pdF"/>
+            </connections>
+            <point key="canvasLocation" x="236.64122137404578" y="88.732394366197184"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_next" width="10" height="16"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

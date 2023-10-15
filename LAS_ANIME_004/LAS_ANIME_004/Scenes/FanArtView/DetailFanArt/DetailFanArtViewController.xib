@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BalooBhaina2-Bold.ttf">
+            <string>BalooBhaina2-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailFanArtViewController" customModule="LAS_ANIME_004" customModuleProvider="target">
+            <connections>
+                <outlet property="detailImageView" destination="qSe-it-HGj" id="tpM-S3-gRC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSl-op-CPZ">
+                    <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rez-Es-rbc">
+                            <rect key="frame" x="10" y="0.0" width="75" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="pjd-hn-QTD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="BalooBhaina2-Bold" family="Baloo Bhaina 2" pointSize="22"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelClick:" destination="-1" eventType="touchUpInside" id="2O2-0g-c8q"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZD-yG-bMh">
+                            <rect key="frame" x="308" y="0.0" width="75" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="enM-d4-ovP"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_download"/>
+                            <connections>
+                                <action selector="downloadClick:" destination="-1" eventType="touchUpInside" id="b9o-Ux-pWH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="NZD-yG-bMh" secondAttribute="trailing" constant="10" id="2VQ-xc-hfi"/>
+                        <constraint firstAttribute="bottom" secondItem="NZD-yG-bMh" secondAttribute="bottom" id="Ckl-OB-SFY"/>
+                        <constraint firstAttribute="height" constant="50" id="LAz-fk-Mzc"/>
+                        <constraint firstItem="Rez-Es-rbc" firstAttribute="top" secondItem="LSl-op-CPZ" secondAttribute="top" id="XaT-Ce-jXr"/>
+                        <constraint firstItem="NZD-yG-bMh" firstAttribute="top" secondItem="LSl-op-CPZ" secondAttribute="top" id="cI7-68-Wuf"/>
+                        <constraint firstAttribute="bottom" secondItem="Rez-Es-rbc" secondAttribute="bottom" id="fR3-pf-g50"/>
+                        <constraint firstItem="Rez-Es-rbc" firstAttribute="leading" secondItem="LSl-op-CPZ" secondAttribute="leading" constant="10" id="iUe-zq-mld"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qSe-it-HGj">
+                    <rect key="frame" x="0.0" y="109" width="393" height="699"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qSe-it-HGj" firstAttribute="top" secondItem="LSl-op-CPZ" secondAttribute="bottom" id="4zM-jX-nHq"/>
+                <constraint firstItem="LSl-op-CPZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="E5y-eZ-iwI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qSe-it-HGj" secondAttribute="bottom" constant="10" id="HlI-No-5lc"/>
+                <constraint firstItem="qSe-it-HGj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O8C-kq-dZ8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qSe-it-HGj" secondAttribute="trailing" id="aW7-yt-2LP"/>
+                <constraint firstItem="LSl-op-CPZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rQO-K1-y6W"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LSl-op-CPZ" secondAttribute="trailing" id="vMn-nn-6is"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_download" width="32.333332061767578" height="32.333332061767578"/>
+    </resources>
+</document>
