@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		335941E32AD6AAD2009025A0 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335941E22AD6AAD2009025A0 /* BaseCollectionViewController.swift */; };
-		335941E52AD6AAEF009025A0 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335941E42AD6AAEF009025A0 /* BaseTableViewController.swift */; };
 		335941E82AD6AFC9009025A0 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335941E72AD6AFC9009025A0 /* Configuration.swift */; };
 		33716FD32ACFABA400944752 /* AnimeQuoteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33716FD22ACFABA400944752 /* AnimeQuoteCardView.swift */; };
 		33716FD72ACFC59100944752 /* FanArtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33716FD52ACFC59100944752 /* FanArtTableViewCell.swift */; };
@@ -22,8 +20,6 @@
 		33CDB0B32ACE94930080B1FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CDB0B12ACE94930080B1FD /* LaunchScreen.storyboard */; };
 		33CDB0BE2ACE95740080B1FD /* AnimeQuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CDB0BC2ACE95740080B1FD /* AnimeQuoteModel.swift */; };
 		33CDB0BF2ACE95740080B1FD /* AnimeShortModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CDB0BD2ACE95740080B1FD /* AnimeShortModel.swift */; };
-		33CDB0D52ACE95890080B1FD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CDB0CC2ACE95890080B1FD /* BaseViewController.swift */; };
-		33CDB0D62ACE95890080B1FD /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CDB0CD2ACE95890080B1FD /* BaseViewModel.swift */; };
 		33CDB0EF2ACE95920080B1FD /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CDB0D92ACE95920080B1FD /* UIImageView+Extension.swift */; };
 		33CDB0F02ACE95920080B1FD /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CDB0DA2ACE95920080B1FD /* UIColor+Extension.swift */; };
 		33CDB0F22ACE95920080B1FD /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CDB0DC2ACE95920080B1FD /* UILabel+Extension.swift */; };
@@ -63,7 +59,6 @@
 		33CDB1332ACEA44A0080B1FD /* BalooBhaina2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33CDB12E2ACEA44A0080B1FD /* BalooBhaina2-Medium.ttf */; };
 		33CDB1342ACEA44A0080B1FD /* BalooBhaina2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33CDB12F2ACEA44A0080B1FD /* BalooBhaina2-ExtraBold.ttf */; };
 		33CDB1362ACEB3050080B1FD /* QuoteOfDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CDB1352ACEB3050080B1FD /* QuoteOfDayViewModel.swift */; };
-		33CDB1382ACEB31A0080B1FD /* QuoteOfDayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CDB1372ACEB31A0080B1FD /* QuoteOfDayUseCase.swift */; };
 		33CDB13C2ACEB5700080B1FD /* AnimeQuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CDB13B2ACEB5700080B1FD /* AnimeQuoteViewModel.swift */; };
 		33CDB13E2ACEB57C0080B1FD /* AnimeQuoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CDB13D2ACEB57C0080B1FD /* AnimeQuoteUseCase.swift */; };
 		33CDB1422ACEB5960080B1FD /* FanArtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CDB1412ACEB5960080B1FD /* FanArtViewModel.swift */; };
@@ -87,11 +82,14 @@
 		33F9BCB32AD3D8AE00BA1489 /* ViewAllFanArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F9BCB12AD3D8AE00BA1489 /* ViewAllFanArtViewController.xib */; };
 		33F9BCB82AD42CA600BA1489 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F9BCB72AD42CA600BA1489 /* ReachabilityManager.swift */; };
 		7C747E2DEA8076E10A2A4934 /* Pods_Tanqin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31F258D32C5A85A8E008F16 /* Pods_Tanqin.framework */; };
+		CBAD60922AE11E13009F68CE /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAD608E2AE11E12009F68CE /* BaseCollectionViewController.swift */; };
+		CBAD60932AE11E13009F68CE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAD608F2AE11E12009F68CE /* BaseViewController.swift */; };
+		CBAD60942AE11E13009F68CE /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAD60902AE11E12009F68CE /* BaseTableViewController.swift */; };
+		CBAD60952AE11E13009F68CE /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAD60912AE11E12009F68CE /* BaseViewModel.swift */; };
+		CBAD60972AE11F99009F68CE /* QuoteOfDayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAD60962AE11F99009F68CE /* QuoteOfDayUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		335941E22AD6AAD2009025A0 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
-		335941E42AD6AAEF009025A0 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		335941E72AD6AFC9009025A0 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		33716FD22ACFABA400944752 /* AnimeQuoteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeQuoteCardView.swift; sourceTree = "<group>"; };
 		33716FD52ACFC59100944752 /* FanArtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanArtTableViewCell.swift; sourceTree = "<group>"; };
@@ -107,8 +105,6 @@
 		33CDB0B42ACE94930080B1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CDB0BC2ACE95740080B1FD /* AnimeQuoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeQuoteModel.swift; sourceTree = "<group>"; };
 		33CDB0BD2ACE95740080B1FD /* AnimeShortModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeShortModel.swift; sourceTree = "<group>"; };
-		33CDB0CC2ACE95890080B1FD /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		33CDB0CD2ACE95890080B1FD /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		33CDB0D92ACE95920080B1FD /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		33CDB0DA2ACE95920080B1FD /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		33CDB0DC2ACE95920080B1FD /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -148,7 +144,6 @@
 		33CDB12E2ACEA44A0080B1FD /* BalooBhaina2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaina2-Medium.ttf"; sourceTree = "<group>"; };
 		33CDB12F2ACEA44A0080B1FD /* BalooBhaina2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaina2-ExtraBold.ttf"; sourceTree = "<group>"; };
 		33CDB1352ACEB3050080B1FD /* QuoteOfDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteOfDayViewModel.swift; sourceTree = "<group>"; };
-		33CDB1372ACEB31A0080B1FD /* QuoteOfDayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteOfDayUseCase.swift; sourceTree = "<group>"; };
 		33CDB13B2ACEB5700080B1FD /* AnimeQuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeQuoteViewModel.swift; sourceTree = "<group>"; };
 		33CDB13D2ACEB57C0080B1FD /* AnimeQuoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeQuoteUseCase.swift; sourceTree = "<group>"; };
 		33CDB1412ACEB5960080B1FD /* FanArtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanArtViewModel.swift; sourceTree = "<group>"; };
@@ -172,6 +167,11 @@
 		33F9BCB12AD3D8AE00BA1489 /* ViewAllFanArtViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewAllFanArtViewController.xib; sourceTree = "<group>"; };
 		33F9BCB72AD42CA600BA1489 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		4865F4DE69F656D4D4DF22F8 /* Pods-Tanqin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tanqin.release.xcconfig"; path = "Target Support Files/Pods-Tanqin/Pods-Tanqin.release.xcconfig"; sourceTree = "<group>"; };
+		CBAD608E2AE11E12009F68CE /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
+		CBAD608F2AE11E12009F68CE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CBAD60902AE11E12009F68CE /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		CBAD60912AE11E12009F68CE /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		CBAD60962AE11F99009F68CE /* QuoteOfDayUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteOfDayUseCase.swift; sourceTree = "<group>"; };
 		EDEEAFCC022A868CDB33B1B4 /* Pods-Tanqin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tanqin.debug.xcconfig"; path = "Target Support Files/Pods-Tanqin/Pods-Tanqin.debug.xcconfig"; sourceTree = "<group>"; };
 		F31F258D32C5A85A8E008F16 /* Pods_Tanqin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tanqin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -283,6 +283,7 @@
 		33CDB0C12ACE95890080B1FD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CBAD608D2AE11E12009F68CE /* Base */,
 				33CDB1512ACEBEC40080B1FD /* MainTabbar */,
 				33CDB1122ACE97AC0080B1FD /* QuoteOfDayView */,
 				33CDB1132ACE97B90080B1FD /* AnimeQuoteView */,
@@ -290,17 +291,6 @@
 				33CDB1152ACE97CD0080B1FD /* ShortView */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		33CDB0CB2ACE95890080B1FD /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				33CDB0CC2ACE95890080B1FD /* BaseViewController.swift */,
-				33CDB0CD2ACE95890080B1FD /* BaseViewModel.swift */,
-				335941E22AD6AAD2009025A0 /* BaseCollectionViewController.swift */,
-				335941E42AD6AAEF009025A0 /* BaseTableViewController.swift */,
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 		33CDB0D72ACE95920080B1FD /* Utils */ = {
@@ -362,7 +352,6 @@
 			children = (
 				33CDB1062ACE95A70080B1FD /* GithubService.swift */,
 				33CDB1082ACE95A70080B1FD /* BaseService.swift */,
-				33CDB1372ACEB31A0080B1FD /* QuoteOfDayUseCase.swift */,
 				33CDB1092ACE95A70080B1FD /* EndPoint.swift */,
 			);
 			path = Service;
@@ -371,10 +360,10 @@
 		33CDB1122ACE97AC0080B1FD /* QuoteOfDayView */ = {
 			isa = PBXGroup;
 			children = (
+				CBAD60962AE11F99009F68CE /* QuoteOfDayUseCase.swift */,
 				33CDB1162ACE98030080B1FD /* QuoteOfDayViewController.swift */,
 				33CDB1172ACE98030080B1FD /* QuoteOfDayViewController.xib */,
 				33CDB1352ACEB3050080B1FD /* QuoteOfDayViewModel.swift */,
-				33CDB0CB2ACE95890080B1FD /* Base */,
 			);
 			path = QuoteOfDayView;
 			sourceTree = "<group>";
@@ -492,6 +481,17 @@
 				4865F4DE69F656D4D4DF22F8 /* Pods-Tanqin.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CBAD608D2AE11E12009F68CE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CBAD608E2AE11E12009F68CE /* BaseCollectionViewController.swift */,
+				CBAD608F2AE11E12009F68CE /* BaseViewController.swift */,
+				CBAD60902AE11E12009F68CE /* BaseTableViewController.swift */,
+				CBAD60912AE11E12009F68CE /* BaseViewModel.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		E3A249B26DDFB3D6406A0289 /* Frameworks */ = {
@@ -633,27 +633,25 @@
 			files = (
 				33CDB1112ACE974F0080B1FD /* Constants.swift in Sources */,
 				33CDB0F72ACE95920080B1FD /* String+Extension.swift in Sources */,
-				335941E52AD6AAEF009025A0 /* BaseTableViewController.swift in Sources */,
 				33CDB0FA2ACE95920080B1FD /* ProgressHub+Rx+Extension.swift in Sources */,
 				33CDB1002ACE95920080B1FD /* AttributedStringBulder.swift in Sources */,
 				33CDB1182ACE98030080B1FD /* QuoteOfDayViewController.swift in Sources */,
+				CBAD60932AE11E13009F68CE /* BaseViewController.swift in Sources */,
 				33F39A992AD7994B00F67B7F /* KolodaView.swift in Sources */,
 				33CDB0EF2ACE95920080B1FD /* UIImageView+Extension.swift in Sources */,
-				335941E32AD6AAD2009025A0 /* BaseCollectionViewController.swift in Sources */,
 				33CDB0FC2ACE95920080B1FD /* ErrorTracker.swift in Sources */,
 				33F39A972AD7994B00F67B7F /* OverlayView.swift in Sources */,
 				33716FD32ACFABA400944752 /* AnimeQuoteCardView.swift in Sources */,
 				335941E82AD6AFC9009025A0 /* Configuration.swift in Sources */,
 				33CDB1422ACEB5960080B1FD /* FanArtViewModel.swift in Sources */,
+				CBAD60952AE11E13009F68CE /* BaseViewModel.swift in Sources */,
 				33CDB0FE2ACE95920080B1FD /* UIViewController+Rx.swift in Sources */,
 				33CDB1362ACEB3050080B1FD /* QuoteOfDayViewModel.swift in Sources */,
 				33CDB10C2ACE95A70080B1FD /* BaseService.swift in Sources */,
 				33CDB1042ACE959D0080B1FD /* AppError.swift in Sources */,
 				33F39A9F2AD79B9E00F67B7F /* DetailFanArtViewController.swift in Sources */,
 				33F9BCAE2AD3BD7A00BA1489 /* FanArtModel.swift in Sources */,
-				33CDB0D52ACE95890080B1FD /* BaseViewController.swift in Sources */,
 				33CDB14A2ACEB5BD0080B1FD /* ShortUseCase.swift in Sources */,
-				33CDB1382ACEB31A0080B1FD /* QuoteOfDayUseCase.swift in Sources */,
 				33CDB0F42ACE95920080B1FD /* URL+Extension.swift in Sources */,
 				33CDB0F82ACE95920080B1FD /* PHAsset+Extension.swift in Sources */,
 				33CDB1202ACE981D0080B1FD /* FanArtViewController.swift in Sources */,
@@ -664,8 +662,8 @@
 				33F9BCB82AD42CA600BA1489 /* ReachabilityManager.swift in Sources */,
 				33716FD72ACFC59100944752 /* FanArtTableViewCell.swift in Sources */,
 				33CDB10A2ACE95A70080B1FD /* GithubService.swift in Sources */,
-				33CDB0D62ACE95890080B1FD /* BaseViewModel.swift in Sources */,
 				33F9BCAB2AD3BC1D00BA1489 /* ArtItemCell.swift in Sources */,
+				CBAD60922AE11E13009F68CE /* BaseCollectionViewController.swift in Sources */,
 				33CDB0FD2ACE95920080B1FD /* ActivityIndicator.swift in Sources */,
 				33F39A952AD7994B00F67B7F /* KolodaCardStorage.swift in Sources */,
 				33CDB1442ACEB5A00080B1FD /* FanArtUseCase.swift in Sources */,
@@ -673,6 +671,7 @@
 				33CDB10D2ACE95A70080B1FD /* EndPoint.swift in Sources */,
 				33CDB0F02ACE95920080B1FD /* UIColor+Extension.swift in Sources */,
 				33F39A982AD7994B00F67B7F /* KolodaViewAnimatior.swift in Sources */,
+				CBAD60972AE11F99009F68CE /* QuoteOfDayUseCase.swift in Sources */,
 				33F39AA22AD7A82400F67B7F /* Permission.swift in Sources */,
 				33CDB1012ACE95920080B1FD /* Utils.swift in Sources */,
 				33F39A9A2AD7994B00F67B7F /* KolodaAnimationSemaphore.swift in Sources */,
@@ -681,6 +680,7 @@
 				33F39A9B2AD7994B00F67B7F /* SwipeResultDirection.swift in Sources */,
 				33CDB0F92ACE95920080B1FD /* UITapGestureRecognizer+Extension.swift in Sources */,
 				33F9BCB22AD3D8AE00BA1489 /* ViewAllFanArtViewController.swift in Sources */,
+				CBAD60942AE11E13009F68CE /* BaseTableViewController.swift in Sources */,
 				33CDB13E2ACEB57C0080B1FD /* AnimeQuoteUseCase.swift in Sources */,
 				33CDB0FF2ACE95920080B1FD /* Toast.swift in Sources */,
 				33CDB0BF2ACE95740080B1FD /* AnimeShortModel.swift in Sources */,
