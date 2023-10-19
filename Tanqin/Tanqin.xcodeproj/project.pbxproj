@@ -247,8 +247,8 @@
 				33CDB0C12ACE95890080B1FD /* Scenes */,
 				33CDB0AC2ACE94900080B1FD /* Main.storyboard */,
 				33CDB0AF2ACE94930080B1FD /* Assets.xcassets */,
-				33CDB0B12ACE94930080B1FD /* LaunchScreen.storyboard */,
 				33CDB0B42ACE94930080B1FD /* Info.plist */,
+				33CDB0B12ACE94930080B1FD /* LaunchScreen.storyboard */,
 			);
 			path = Tanqin;
 			sourceTree = "<group>";
@@ -284,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				33CDB1512ACEBEC40080B1FD /* MainTabbar */,
-				33CDB0CB2ACE95890080B1FD /* Base */,
 				33CDB1122ACE97AC0080B1FD /* QuoteOfDayView */,
 				33CDB1132ACE97B90080B1FD /* AnimeQuoteView */,
 				33CDB1142ACE97C40080B1FD /* FanArtView */,
@@ -363,6 +362,7 @@
 			children = (
 				33CDB1062ACE95A70080B1FD /* GithubService.swift */,
 				33CDB1082ACE95A70080B1FD /* BaseService.swift */,
+				33CDB1372ACEB31A0080B1FD /* QuoteOfDayUseCase.swift */,
 				33CDB1092ACE95A70080B1FD /* EndPoint.swift */,
 			);
 			path = Service;
@@ -374,7 +374,7 @@
 				33CDB1162ACE98030080B1FD /* QuoteOfDayViewController.swift */,
 				33CDB1172ACE98030080B1FD /* QuoteOfDayViewController.xib */,
 				33CDB1352ACEB3050080B1FD /* QuoteOfDayViewModel.swift */,
-				33CDB1372ACEB31A0080B1FD /* QuoteOfDayUseCase.swift */,
+				33CDB0CB2ACE95890080B1FD /* Base */,
 			);
 			path = QuoteOfDayView;
 			sourceTree = "<group>";
@@ -840,7 +840,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VYAT3G6F8;
+				DEVELOPMENT_TEAM = FAWF54HC53;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tanqin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -872,7 +872,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VYAT3G6F8;
+				DEVELOPMENT_TEAM = FAWF54HC53;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tanqin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

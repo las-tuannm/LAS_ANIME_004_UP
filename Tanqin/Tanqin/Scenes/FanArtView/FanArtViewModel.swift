@@ -96,8 +96,8 @@ class FanArtViewModel: BaseViewModel {
                 guard let self = self else {
                     return .empty()
                 }
-                return Driver.combineLatest(fanArt1, fanArt2, fanArt3, fanArt4, fanArt5, fanArt6, fanArt7, fanArt8) {
-                    return [$0, $1, $2, $3, $4, $5, $6, $7]
+                return Driver.combineLatest(fanArt1, fanArt2, fanArt3, fanArt4, fanArt5, fanArt6) {
+                    return [$0, $1, $2, $3, $4, $5]
                 }
                 .trackError(errorTracker)
                 .trackActivity(loading)

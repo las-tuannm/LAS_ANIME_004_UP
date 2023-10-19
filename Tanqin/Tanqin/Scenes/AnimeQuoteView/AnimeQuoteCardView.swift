@@ -14,6 +14,7 @@ class AnimeQuoteCardView: UIView {
         let imv = UIImageView()
         imv.contentMode = .scaleAspectFill
         imv.backgroundColor = UIColor(hex: "#D8D8D8", alpha: 1)
+        imv.contentMode = .scaleAspectFill
         imv.setLayout(radius: 10, borderWidth: 1, borderColor: UIColor(hex: "#979797", alpha: 1))
         return imv
     }()
@@ -67,7 +68,7 @@ class AnimeQuoteCardView: UIView {
         
         avatar.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(21)
-            make.width.equalTo(86)
+            make.width.equalTo(244)
             make.height.equalTo(122)
             make.centerX.equalToSuperview()
         }

@@ -23,7 +23,7 @@ class MainTabbaController: UITabBarController {
             case .animeQuote:
                 return "Anime quote"
             case .fanArt:
-                return "Fan Art"
+                return "Wallpaper"
             default:
                 return "Short"
             }

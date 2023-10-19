@@ -14,7 +14,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FanArtViewController" customModule="LAS_ANIME_004" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FanArtViewController" customModule="Tanqin" customModuleProvider="target">
             <connections>
                 <outlet property="fanArtTableView" destination="xqE-UH-VNP" id="gtm-Mo-Bid"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -34,8 +34,8 @@
                         <constraint firstAttribute="height" constant="224" id="PgO-KX-xli"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fan Art" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XON-Wo-pQM">
-                    <rect key="frame" x="151" y="59" width="91" height="56.666666666666657"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallpaper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XON-Wo-pQM">
+                    <rect key="frame" x="132.66666666666666" y="59" width="127.66666666666666" height="56.666666666666657"/>
                     <fontDescription key="fontDescription" name="BalooBhaina2-Bold" family="Baloo Bhaina 2" pointSize="28"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

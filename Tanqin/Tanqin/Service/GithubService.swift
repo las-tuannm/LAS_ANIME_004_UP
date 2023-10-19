@@ -9,20 +9,22 @@ import Foundation
 import RxSwift
 
 enum APIPath: String {
-    case animeQuote = "/khanhVu-ops/TestJsonData/main/anime_data/anime_quote.json"
-    case animeShort = "/khanhVu-ops/TestJsonData/main/anime_data/anime_short.json"
-    case animeQuoteDay = "/khanhVu-ops/TestJsonData/main/anime_data/anime_quote_day.json"
+    case animeQuote = "/tuannm167/ANIME_WALLPAPER/main/anime_json/anime_quote.json"
+    case animeShort = "/tuannm167/ANIME_WALLPAPER/main/anime_json/anime_short.json"
+    case animeQuoteDay = "/tuannm167/ANIME_WALLPAPER/main/anime_json/anime_quote_day.json"
+    
+    
     
     enum FanArt: String, CaseIterable {
         
-        case gintama = "/khanhVu-ops/TestJsonData/main/anime_data/fan_art/gintama.json"
-        case honkai_tag = "/khanhVu-ops/TestJsonData/main/anime_data/fan_art/honkai_tag.json"
-        case jujutsu_kaisen = "/khanhVu-ops/TestJsonData/main/anime_data/fan_art/jujutsu_kaisen.json"
-        case nisekoi = "/khanhVu-ops/TestJsonData/main/anime_data/fan_art/nisekoi.json"
-        case one_piece = "/khanhVu-ops/TestJsonData/main/anime_data/fan_art/one_piece.json"
-        case oshi_no_ko = "/khanhVu-ops/TestJsonData/main/anime_data/fan_art/oshi_no_ko.json"
-        case suki_na_ko_ga_Megane_wo_Wasureta = "/khanhVu-ops/TestJsonData/main/anime_data/fan_art/suki_na_ko_ga_Megane_wo_Wasureta.json"
-        case vocaloid = "/khanhVu-ops/TestJsonData/main/anime_data/fan_art/vocaloid.json"
+        case gintama = "/tuannm167/ANIME_WALLPAPER/main/anime_json/fan_art/natural_art.json"
+        case honkai_tag = "/tuannm167/ANIME_WALLPAPER/main/anime_json/fan_art/cherry.json"
+        case jujutsu_kaisen = "/tuannm167/ANIME_WALLPAPER/main/anime_json/fan_art/jujutsu_kaisen.json"
+        case nisekoi = "/tuannm167/ANIME_WALLPAPER/main/anime_json/fan_art/city_art.json"
+        case one_piece = "/tuannm167/ANIME_WALLPAPER/main/anime_json/fan_art/pixelart.json"
+        case oshi_no_ko = "/tuannm167/ANIME_WALLPAPER/main/anime_json/fan_art/tea.json"
+        case suki_na_ko_ga_Megane_wo_Wasureta = "/tuannm167/ANIME_WALLPAPER/main/anime_json/fan_art/suki_na_ko_ga_Megane_wo_Wasureta.json"
+        case vocaloid = "/tuannm167/ANIME_WALLPAPER/main/anime_json/fan_art/gruvart.json"
         
 //        var id: Int {
 //            switch self {
