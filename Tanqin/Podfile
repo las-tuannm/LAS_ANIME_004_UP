@@ -4,7 +4,7 @@
 target 'Tanqin' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for Tanqin
   pod 'Toast-Swift'
   pod 'SnapKit'
@@ -15,7 +15,8 @@ target 'Tanqin' do
   pod "pop"
   pod 'ReachabilitySwift'
   pod 'MJRefresh'
-
+  pod 'lottie-ios'
+  
   # Applovin mediation
   pod 'AppLovinSDK'
   pod 'AppLovinMediationAdColonyAdapter'
@@ -28,11 +29,11 @@ end
 
 post_install do |installer|
   installer.generated_projects.each do |project|
-        project.targets.each do |target|
-            target.build_configurations.each do |config|
-                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
-             end
-        end
- end
+    project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+      end
+    end
+  end
 end
 

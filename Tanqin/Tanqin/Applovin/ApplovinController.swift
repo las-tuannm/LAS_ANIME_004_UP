@@ -2,7 +2,7 @@
 //  ApplovinController.swift
 //  Tanqin
 //
-//  Created by Quynh Nguyen on 22/10/2023.
+//  Created by HaKT on 22/10/2023.
 //
 
 import UIKit
@@ -38,6 +38,7 @@ class ApplovinController: NSObject {
         ALSdk.shared()!.initializeSdk { (configuration: ALSdkConfiguration) in
             self._isReady = true
             completion()
+            NotificationCenter.default.post(name: .applovinAvailable, object: nil)
         }
     }
 }

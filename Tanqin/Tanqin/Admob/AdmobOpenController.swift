@@ -2,7 +2,7 @@
 //  AdmobOpenController.swift
 //  Tanqin
 //
-//  Created by Quynh Nguyen on 22/10/2023.
+//  Created by HaKT on 22/10/2023.
 //
 
 import UIKit

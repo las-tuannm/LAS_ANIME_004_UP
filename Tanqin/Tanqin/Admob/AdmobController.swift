@@ -2,7 +2,7 @@
 //  AdmobController.swift
 //  Tanqin
 //
-//  Created by Quynh Nguyen on 22/10/2023.
+//  Created by HaKT on 22/10/2023.
 //
 
 import UIKit
@@ -36,7 +36,7 @@ class AdmobController: NSObject {
         GADMobileAds.sharedInstance().start { _ in
             self._isReady = true
             completion()
-            NotificationCenter.default.post(name: NSNotification.Name("admob-available"), object: nil)
+            NotificationCenter.default.post(name: .admobAvailable, object: nil)
         }
     }
 }

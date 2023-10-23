@@ -10,6 +10,10 @@ import UIKit
 
 class MainTabbaController: UITabBarController {
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     enum TabbarEnum {
         case quoteOfDay
         case animeQuote

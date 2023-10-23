@@ -23,6 +23,10 @@ class BaseViewController: UIViewController {
     let reachabilityManager = ReachabilityManager.shared
 //    let isViewVisibleDriver = BehaviorRelay<Bool>(value: false)
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

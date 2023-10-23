@@ -58,11 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // SceneDelegate.swift will config
         }
         else {
-            let navigationController = UINavigationController(rootViewController: MainTabbaController())
-            navigationController.setNavigationBarHidden(true, animated: false)
-            //
             window = UIWindow(frame: UIScreen.main.bounds)
-            window?.rootViewController = navigationController
+            window?.rootViewController = SplashController()
             window?.makeKeyAndVisible()
         }
         

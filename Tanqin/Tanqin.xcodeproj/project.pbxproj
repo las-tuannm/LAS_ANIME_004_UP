@@ -81,6 +81,11 @@
 		33F9BCB22AD3D8AE00BA1489 /* ViewAllFanArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F9BCB02AD3D8AD00BA1489 /* ViewAllFanArtViewController.swift */; };
 		33F9BCB32AD3D8AE00BA1489 /* ViewAllFanArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F9BCB12AD3D8AE00BA1489 /* ViewAllFanArtViewController.xib */; };
 		33F9BCB82AD42CA600BA1489 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F9BCB72AD42CA600BA1489 /* ReachabilityManager.swift */; };
+		5B706F682AE65DC1002133AF /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B706F662AE65DC1002133AF /* SplashController.swift */; };
+		5B706F692AE65DC1002133AF /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B706F672AE65DC1002133AF /* SplashController.xib */; };
+		5B706F6B2AE65FDD002133AF /* BaseNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B706F6A2AE65FDD002133AF /* BaseNavigation.swift */; };
+		5B706F6D2AE6610B002133AF /* NSNotification_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B706F6C2AE6610B002133AF /* NSNotification_Extension.swift */; };
+		5B706F6F2AE66656002133AF /* loadingT.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B706F6E2AE66656002133AF /* loadingT.json */; };
 		5BD4DC882AE51BF900454F6E /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4DC852AE51BF900454F6E /* LocalStorage.swift */; };
 		5BD4DC892AE51BF900454F6E /* AdsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4DC862AE51BF900454F6E /* AdsItemModel.swift */; };
 		5BD4DC8A2AE51BF900454F6E /* GlobalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4DC872AE51BF900454F6E /* GlobalDataModel.swift */; };
@@ -175,6 +180,11 @@
 		33F9BCB12AD3D8AE00BA1489 /* ViewAllFanArtViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewAllFanArtViewController.xib; sourceTree = "<group>"; };
 		33F9BCB72AD42CA600BA1489 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		4865F4DE69F656D4D4DF22F8 /* Pods-Tanqin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tanqin.release.xcconfig"; path = "Target Support Files/Pods-Tanqin/Pods-Tanqin.release.xcconfig"; sourceTree = "<group>"; };
+		5B706F662AE65DC1002133AF /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
+		5B706F672AE65DC1002133AF /* SplashController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashController.xib; sourceTree = "<group>"; };
+		5B706F6A2AE65FDD002133AF /* BaseNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigation.swift; sourceTree = "<group>"; };
+		5B706F6C2AE6610B002133AF /* NSNotification_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification_Extension.swift; sourceTree = "<group>"; };
+		5B706F6E2AE66656002133AF /* loadingT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingT.json; sourceTree = "<group>"; };
 		5BD4DC852AE51BF900454F6E /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		5BD4DC862AE51BF900454F6E /* AdsItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsItemModel.swift; sourceTree = "<group>"; };
 		5BD4DC872AE51BF900454F6E /* GlobalDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDataModel.swift; sourceTree = "<group>"; };
@@ -310,6 +320,8 @@
 				33CDB1132ACE97B90080B1FD /* AnimeQuoteView */,
 				33CDB1142ACE97C40080B1FD /* FanArtView */,
 				33CDB1152ACE97CD0080B1FD /* ShortView */,
+				5B706F662AE65DC1002133AF /* SplashController.swift */,
+				5B706F672AE65DC1002133AF /* SplashController.xib */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -341,6 +353,7 @@
 				33CDB0E22ACE95920080B1FD /* PHAsset+Extension.swift */,
 				33CDB0E32ACE95920080B1FD /* UITapGestureRecognizer+Extension.swift */,
 				33CDB0E42ACE95920080B1FD /* Rx */,
+				5B706F6C2AE6610B002133AF /* NSNotification_Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,6 +443,7 @@
 		33CDB12A2ACEA44A0080B1FD /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				5B706F6E2AE66656002133AF /* loadingT.json */,
 				33CDB12B2ACEA44A0080B1FD /* BalooBhaina2-Bold.ttf */,
 				33CDB12C2ACEA44A0080B1FD /* BalooBhaina2-Regular.ttf */,
 				33CDB12D2ACEA44A0080B1FD /* BalooBhaina2-SemiBold.ttf */,
@@ -530,6 +544,7 @@
 				CBAD608F2AE11E12009F68CE /* BaseViewController.swift */,
 				CBAD60902AE11E12009F68CE /* BaseTableViewController.swift */,
 				CBAD60912AE11E12009F68CE /* BaseViewModel.swift */,
+				5B706F6A2AE65FDD002133AF /* BaseNavigation.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -605,6 +620,7 @@
 			files = (
 				33CDB0B32ACE94930080B1FD /* LaunchScreen.storyboard in Resources */,
 				33716FDD2ACFC8E400944752 /* ShortItemCell.xib in Resources */,
+				5B706F692AE65DC1002133AF /* SplashController.xib in Resources */,
 				33CDB11D2ACE980E0080B1FD /* AnimeQuoteViewController.xib in Resources */,
 				33CDB1342ACEA44A0080B1FD /* BalooBhaina2-ExtraBold.ttf in Resources */,
 				33CDB1192ACE98030080B1FD /* QuoteOfDayViewController.xib in Resources */,
@@ -620,6 +636,7 @@
 				33CDB1292ACE9A120080B1FD /* ShortViewController.xib in Resources */,
 				33CDB1332ACEA44A0080B1FD /* BalooBhaina2-Medium.ttf in Resources */,
 				33CDB1312ACEA44A0080B1FD /* BalooBhaina2-Regular.ttf in Resources */,
+				5B706F6F2AE66656002133AF /* loadingT.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +724,7 @@
 				CBAD60952AE11E13009F68CE /* BaseViewModel.swift in Sources */,
 				33CDB0FE2ACE95920080B1FD /* UIViewController+Rx.swift in Sources */,
 				33CDB1362ACEB3050080B1FD /* QuoteOfDayViewModel.swift in Sources */,
+				5B706F6B2AE65FDD002133AF /* BaseNavigation.swift in Sources */,
 				33CDB10C2ACE95A70080B1FD /* BaseService.swift in Sources */,
 				33CDB1042ACE959D0080B1FD /* AppError.swift in Sources */,
 				33F39A9F2AD79B9E00F67B7F /* DetailFanArtViewController.swift in Sources */,
@@ -714,6 +732,7 @@
 				33CDB14A2ACEB5BD0080B1FD /* ShortUseCase.swift in Sources */,
 				33CDB0F42ACE95920080B1FD /* URL+Extension.swift in Sources */,
 				33CDB0F82ACE95920080B1FD /* PHAsset+Extension.swift in Sources */,
+				5B706F6D2AE6610B002133AF /* NSNotification_Extension.swift in Sources */,
 				33CDB1202ACE981D0080B1FD /* FanArtViewController.swift in Sources */,
 				33CDB0F52ACE95920080B1FD /* UIViewController+Extension.swift in Sources */,
 				5BD4DC892AE51BF900454F6E /* AdsItemModel.swift in Sources */,
@@ -743,6 +762,7 @@
 				5BD4DC942AE51F6600454F6E /* ApplovinOpenController.swift in Sources */,
 				33F9BCB22AD3D8AE00BA1489 /* ViewAllFanArtViewController.swift in Sources */,
 				CBAD60942AE11E13009F68CE /* BaseTableViewController.swift in Sources */,
+				5B706F682AE65DC1002133AF /* SplashController.swift in Sources */,
 				33CDB13E2ACEB57C0080B1FD /* AnimeQuoteUseCase.swift in Sources */,
 				33CDB0FF2ACE95920080B1FD /* Toast.swift in Sources */,
 				5BD4DC8E2AE51DF100454F6E /* AdmobController.swift in Sources */,
@@ -906,9 +926,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FAWF54HC53;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tanqin/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access photo library to save images!";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access photo library to save images!";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -919,7 +942,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "KhanhVu.download-video.LAS-ANIME-004";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taqpin.ahlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -938,9 +961,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FAWF54HC53;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tanqin/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access photo library to save images!";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access photo library to save images!";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -951,7 +977,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "KhanhVu.download-video.LAS-ANIME-004";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taqpin.ahlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

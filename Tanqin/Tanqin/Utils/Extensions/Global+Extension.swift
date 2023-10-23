@@ -73,7 +73,7 @@ extension UIWindow {
     }
     
     var mainTabbar: MainTabbaController? {
-        if let navi = topMost as? UINavigationController {
+        if let navi = topMost as? BaseNavigation {
             for item in navi.viewControllers {
                 if let tab = item as? MainTabbaController {
                     return tab

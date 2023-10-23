@@ -32,7 +32,7 @@ class QuoteOfDayViewController: BaseViewController {
         setUpUI()
         bindViewModel()
         
-        NotificationCenter.default.addObserver(forName: NSNotification.Name("admob-available"), object: nil, queue: .main) { [weak self] _ in
+        NotificationCenter.default.addObserver(forName: .admobAvailable, object: nil, queue: .main) { [weak self] _ in
             self?.loadBanner()
         }
     }
