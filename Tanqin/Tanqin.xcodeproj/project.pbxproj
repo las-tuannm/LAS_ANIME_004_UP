@@ -929,6 +929,7 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tanqin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tanqin;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access photo library to save images!";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access photo library to save images!";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
@@ -941,7 +942,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taqpin.ahlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -964,6 +965,7 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tanqin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tanqin;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access photo library to save images!";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access photo library to save images!";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
@@ -976,7 +978,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taqpin.ahlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
