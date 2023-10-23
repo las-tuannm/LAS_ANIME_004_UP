@@ -44,13 +44,13 @@ struct GlobalDataModel {
     }
     
     // MARK: - keys admob
-    @LocalStorage(key: "admob_banner", value: "ca-app-pub-3940256099942544/2934735716")
+    @LocalStorage(key: "admob_banner", value: "ca-app-pub-2299291161271404/9102730363")
     public var admob_banner: String
     
     @LocalStorage(key: "admob_inter", value: "ca-app-pub-2299291161271404/1049567250")
     public var admob_inter: String
     
-    @LocalStorage(key: "admob_inter_splash", value: "ca-app-pub-3940256099942544/4411468910")
+    @LocalStorage(key: "admob_inter_splash", value: "ca-app-pub-2299291161271404/9440845552")
     public var admob_inter_splash: String
     
     @LocalStorage(key: "admob_reward", value: "ca-app-pub-2299291161271404/5501600544")
