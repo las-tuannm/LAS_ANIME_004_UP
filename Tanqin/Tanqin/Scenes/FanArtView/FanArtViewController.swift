@@ -13,8 +13,11 @@ class FanArtViewController: BaseViewController {
 
     //MARK: - Outlet
     @IBOutlet weak var fanArtTableView: UITableView!
+    @IBOutlet weak var containerBannerAds: UIView!
+    @IBOutlet weak var heightContainerBannerAds: NSLayoutConstraint!
     
     //MARK: - Property
+    var bannerService: AdmobBannerAds?
     var viewModel: FanArtViewModel!
     let category = BehaviorRelay<[FanArtModel]>(value: [])
     
@@ -24,9 +27,19 @@ class FanArtViewController: BaseViewController {
 
         setUpUI()
         bindViewModel()
+        loadBanner()
     }
     
     //MARK: - Private
+    private func loadBanner() {
+        bannerService = AdmobBannerAds(loadHandler: { [weak self] size, success in
+            guard let self = self else { return }
+            
+            self.heightContainerBannerAds.constant = success ? size.height : 0
+        })
+        bannerService?.loadToView(parent: self.containerBannerAds, controller: self)
+    }
+    
     private func setUpUI() {
         fanArtTableView.delegate = self
         fanArtTableView.dataSource = self

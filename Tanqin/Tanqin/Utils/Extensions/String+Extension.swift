@@ -10,6 +10,28 @@ import UIKit
 import RxSwift
 
 extension String {
+    var toJson: TaDictionary? {
+        let data = Data(self.utf8)
+        
+        do {
+            // make sure this JSON is in the format we expect
+            let json = try JSONSerialization.jsonObject(with: data, options: []) as? TaDictionary
+            return json
+        } catch let error as NSError {
+            print("Convert to JSON: \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
+    var toArrayJson: [TaDictionary]? {
+        if let data = self.data(using: .utf8) {
+            do {
+                let result = try JSONSerialization.jsonObject(with: data, options: []) as? [TaDictionary]
+                return result
+            } catch { }
+        }
+        return nil
+    }
     
     var htmlToAttributedString: NSAttributedString? {
         guard let data = data(using: .utf8) else { return nil }

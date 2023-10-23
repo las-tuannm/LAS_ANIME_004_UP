@@ -81,6 +81,14 @@
 		33F9BCB22AD3D8AE00BA1489 /* ViewAllFanArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F9BCB02AD3D8AD00BA1489 /* ViewAllFanArtViewController.swift */; };
 		33F9BCB32AD3D8AE00BA1489 /* ViewAllFanArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F9BCB12AD3D8AE00BA1489 /* ViewAllFanArtViewController.xib */; };
 		33F9BCB82AD42CA600BA1489 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F9BCB72AD42CA600BA1489 /* ReachabilityManager.swift */; };
+		5BD4DC882AE51BF900454F6E /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4DC852AE51BF900454F6E /* LocalStorage.swift */; };
+		5BD4DC892AE51BF900454F6E /* AdsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4DC862AE51BF900454F6E /* AdsItemModel.swift */; };
+		5BD4DC8A2AE51BF900454F6E /* GlobalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4DC872AE51BF900454F6E /* GlobalDataModel.swift */; };
+		5BD4DC8E2AE51DF100454F6E /* AdmobController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4DC8D2AE51DF100454F6E /* AdmobController.swift */; };
+		5BD4DC902AE51E1900454F6E /* AdmobOpenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4DC8F2AE51E1900454F6E /* AdmobOpenController.swift */; };
+		5BD4DC922AE51F4800454F6E /* ApplovinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4DC912AE51F4800454F6E /* ApplovinController.swift */; };
+		5BD4DC942AE51F6600454F6E /* ApplovinOpenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4DC932AE51F6600454F6E /* ApplovinOpenController.swift */; };
+		5BD4DC962AE520B900454F6E /* AdmobBannerAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4DC952AE520B900454F6E /* AdmobBannerAds.swift */; };
 		7C747E2DEA8076E10A2A4934 /* Pods_Tanqin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31F258D32C5A85A8E008F16 /* Pods_Tanqin.framework */; };
 		CBAD60922AE11E13009F68CE /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAD608E2AE11E12009F68CE /* BaseCollectionViewController.swift */; };
 		CBAD60932AE11E13009F68CE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAD608F2AE11E12009F68CE /* BaseViewController.swift */; };
@@ -167,6 +175,14 @@
 		33F9BCB12AD3D8AE00BA1489 /* ViewAllFanArtViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewAllFanArtViewController.xib; sourceTree = "<group>"; };
 		33F9BCB72AD42CA600BA1489 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		4865F4DE69F656D4D4DF22F8 /* Pods-Tanqin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tanqin.release.xcconfig"; path = "Target Support Files/Pods-Tanqin/Pods-Tanqin.release.xcconfig"; sourceTree = "<group>"; };
+		5BD4DC852AE51BF900454F6E /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		5BD4DC862AE51BF900454F6E /* AdsItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsItemModel.swift; sourceTree = "<group>"; };
+		5BD4DC872AE51BF900454F6E /* GlobalDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDataModel.swift; sourceTree = "<group>"; };
+		5BD4DC8D2AE51DF100454F6E /* AdmobController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobController.swift; sourceTree = "<group>"; };
+		5BD4DC8F2AE51E1900454F6E /* AdmobOpenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobOpenController.swift; sourceTree = "<group>"; };
+		5BD4DC912AE51F4800454F6E /* ApplovinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplovinController.swift; sourceTree = "<group>"; };
+		5BD4DC932AE51F6600454F6E /* ApplovinOpenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplovinOpenController.swift; sourceTree = "<group>"; };
+		5BD4DC952AE520B900454F6E /* AdmobBannerAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobBannerAds.swift; sourceTree = "<group>"; };
 		CBAD608E2AE11E12009F68CE /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
 		CBAD608F2AE11E12009F68CE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CBAD60902AE11E12009F68CE /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +253,8 @@
 		33CDB0A52ACE94900080B1FD /* Tanqin */ = {
 			isa = PBXGroup;
 			children = (
+				5BD4DC8C2AE51DD400454F6E /* Applovin */,
+				5BD4DC8B2AE51DD000454F6E /* Admob */,
 				33CDB0BA2ACE95640080B1FD /* Apps */,
 				33CDB12A2ACEA44A0080B1FD /* Fonts */,
 				335941E62AD6AFA6009025A0 /* Configs */,
@@ -265,6 +283,9 @@
 		33CDB0BB2ACE95740080B1FD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5BD4DC862AE51BF900454F6E /* AdsItemModel.swift */,
+				5BD4DC872AE51BF900454F6E /* GlobalDataModel.swift */,
+				5BD4DC852AE51BF900454F6E /* LocalStorage.swift */,
 				33CDB0BC2ACE95740080B1FD /* AnimeQuoteModel.swift */,
 				33CDB0BD2ACE95740080B1FD /* AnimeShortModel.swift */,
 				33F9BCAD2AD3BD7A00BA1489 /* FanArtModel.swift */,
@@ -483,6 +504,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5BD4DC8B2AE51DD000454F6E /* Admob */ = {
+			isa = PBXGroup;
+			children = (
+				5BD4DC8D2AE51DF100454F6E /* AdmobController.swift */,
+				5BD4DC8F2AE51E1900454F6E /* AdmobOpenController.swift */,
+				5BD4DC952AE520B900454F6E /* AdmobBannerAds.swift */,
+			);
+			path = Admob;
+			sourceTree = "<group>";
+		};
+		5BD4DC8C2AE51DD400454F6E /* Applovin */ = {
+			isa = PBXGroup;
+			children = (
+				5BD4DC912AE51F4800454F6E /* ApplovinController.swift */,
+				5BD4DC932AE51F6600454F6E /* ApplovinOpenController.swift */,
+			);
+			path = Applovin;
+			sourceTree = "<group>";
+		};
 		CBAD608D2AE11E12009F68CE /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -653,6 +693,7 @@
 				33CDB0F72ACE95920080B1FD /* String+Extension.swift in Sources */,
 				33CDB0FA2ACE95920080B1FD /* ProgressHub+Rx+Extension.swift in Sources */,
 				33CDB1002ACE95920080B1FD /* AttributedStringBulder.swift in Sources */,
+				5BD4DC922AE51F4800454F6E /* ApplovinController.swift in Sources */,
 				33CDB1182ACE98030080B1FD /* QuoteOfDayViewController.swift in Sources */,
 				CBAD60932AE11E13009F68CE /* BaseViewController.swift in Sources */,
 				33F39A992AD7994B00F67B7F /* KolodaView.swift in Sources */,
@@ -660,6 +701,7 @@
 				33CDB0FC2ACE95920080B1FD /* ErrorTracker.swift in Sources */,
 				33F39A972AD7994B00F67B7F /* OverlayView.swift in Sources */,
 				33716FD32ACFABA400944752 /* AnimeQuoteCardView.swift in Sources */,
+				5BD4DC962AE520B900454F6E /* AdmobBannerAds.swift in Sources */,
 				335941E82AD6AFC9009025A0 /* Configuration.swift in Sources */,
 				33CDB1422ACEB5960080B1FD /* FanArtViewModel.swift in Sources */,
 				CBAD60952AE11E13009F68CE /* BaseViewModel.swift in Sources */,
@@ -674,6 +716,7 @@
 				33CDB0F82ACE95920080B1FD /* PHAsset+Extension.swift in Sources */,
 				33CDB1202ACE981D0080B1FD /* FanArtViewController.swift in Sources */,
 				33CDB0F52ACE95920080B1FD /* UIViewController+Extension.swift in Sources */,
+				5BD4DC892AE51BF900454F6E /* AdsItemModel.swift in Sources */,
 				33CDB0F32ACE95920080B1FD /* UIView+Extension.swift in Sources */,
 				33CDB0F62ACE95920080B1FD /* Global+Extension.swift in Sources */,
 				33CDB13C2ACEB5700080B1FD /* AnimeQuoteViewModel.swift in Sources */,
@@ -697,20 +740,25 @@
 				33F39A962AD7994B00F67B7F /* DraggableCardView.swift in Sources */,
 				33F39A9B2AD7994B00F67B7F /* SwipeResultDirection.swift in Sources */,
 				33CDB0F92ACE95920080B1FD /* UITapGestureRecognizer+Extension.swift in Sources */,
+				5BD4DC942AE51F6600454F6E /* ApplovinOpenController.swift in Sources */,
 				33F9BCB22AD3D8AE00BA1489 /* ViewAllFanArtViewController.swift in Sources */,
 				CBAD60942AE11E13009F68CE /* BaseTableViewController.swift in Sources */,
 				33CDB13E2ACEB57C0080B1FD /* AnimeQuoteUseCase.swift in Sources */,
 				33CDB0FF2ACE95920080B1FD /* Toast.swift in Sources */,
+				5BD4DC8E2AE51DF100454F6E /* AdmobController.swift in Sources */,
 				33CDB0BF2ACE95740080B1FD /* AnimeShortModel.swift in Sources */,
 				33CDB1282ACE9A120080B1FD /* ShortViewController.swift in Sources */,
+				5BD4DC882AE51BF900454F6E /* LocalStorage.swift in Sources */,
 				33CDB1022ACE95920080B1FD /* GlobalFunctions.swift in Sources */,
 				33CDB10F2ACE96900080B1FD /* MainTabbaController.swift in Sources */,
+				5BD4DC902AE51E1900454F6E /* AdmobOpenController.swift in Sources */,
 				33CDB0FB2ACE95920080B1FD /* ObservableType+Extension.swift in Sources */,
 				33CDB0BE2ACE95740080B1FD /* AnimeQuoteModel.swift in Sources */,
 				33CDB0A72ACE94900080B1FD /* AppDelegate.swift in Sources */,
 				33716FDC2ACFC8E400944752 /* ShortItemCell.swift in Sources */,
 				33CDB11C2ACE980E0080B1FD /* AnimeQuoteViewController.swift in Sources */,
 				33CDB0A92ACE94900080B1FD /* SceneDelegate.swift in Sources */,
+				5BD4DC8A2AE51BF900454F6E /* GlobalDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

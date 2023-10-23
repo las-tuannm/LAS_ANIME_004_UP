@@ -67,6 +67,25 @@ extension UIWindow {
             return appDelegate.window ?? nil
         }
     }
+    
+    var topMost: UIViewController? {
+        return UIWindow.keyWindow?.rootViewController
+    }
+    
+    var mainTabbar: MainTabbaController? {
+        if let navi = topMost as? UINavigationController {
+            for item in navi.viewControllers {
+                if let tab = item as? MainTabbaController {
+                    return tab
+                }
+            }
+        }
+        else if let tab = topMost as? MainTabbaController {
+            return tab
+        }
+        
+        return nil
+    }
 }
 
 public extension Array where Element: Equatable {

@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 class QuoteOfDayViewController: BaseViewController {
-
+    
     //MARK: - Outlet
     @IBOutlet weak var quoteImaeView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -18,19 +18,35 @@ class QuoteOfDayViewController: BaseViewController {
     @IBOutlet weak var animeCharacterLabel: UILabel!
     @IBOutlet weak var quotesLabel: UILabel!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var containerBannerAds: UIView!
+    @IBOutlet weak var heightContainerBannerAds: NSLayoutConstraint!
     
     //MAKR: - Property
+    var bannerService: AdmobBannerAds?
     var viewModel: QuoteOfDayViewModel!
     var quoteOfDay = BehaviorRelay<AnimeQuoteDayModel?>(value: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setUpUI()
         bindViewModel()
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("admob-available"), object: nil, queue: .main) { [weak self] _ in
+            self?.loadBanner()
+        }
     }
     
     //MARK: - Private
+    private func loadBanner() {
+        bannerService = AdmobBannerAds(loadHandler: { [weak self] size, success in
+            guard let self = self else { return }
+            
+            self.heightContainerBannerAds.constant = success ? size.height : 0
+        })
+        bannerService?.loadToView(parent: self.containerBannerAds, controller: self)
+    }
+    
     private func setUpUI() {
         titleLabel.textColor = .colorFF4E2F
         animeNameLabel.textColor = .color242833
@@ -67,5 +83,5 @@ class QuoteOfDayViewController: BaseViewController {
             })
             .disposed(by: disposeBag)
     }
-
+    
 }
