@@ -3,12 +3,8 @@ import Foundation
 struct GlobalDataModel {
     private let key = "fizfiozpen"
     
-    fileprivate var fiozpen: Date {
-        if UserDefaults.standard.object(forKey: key) as? Date == nil {
-            UserDefaults.standard.set(Date(), forKey: key)
-            UserDefaults.standard.synchronize()
-        }
-        return UserDefaults.standard.object(forKey: key) as! Date
+    fileprivate var fiozpen: Date? {
+        return UserDefaults.standard.object(forKey: key) as? Date
     }
     
     fileprivate var time: Date?
@@ -29,9 +25,9 @@ struct GlobalDataModel {
     }
     
     public var openRatingView: Bool {
-//        return true
         guard let _time = time else { return false }
-        return _time.timeIntervalSince1970 >= fiozpen.timeIntervalSince1970
+        guard let _f = fiozpen else { return false }
+        return _time.timeIntervalSince1970 >= _f.timeIntervalSince1970
     }
     
     public var isRating: Bool = false
@@ -39,9 +35,7 @@ struct GlobalDataModel {
     // MARK: - static instance
     public static var shared = GlobalDataModel()
     
-    init() {
-        let _ = fiozpen
-    }
+    init() { }
     
     // MARK: - keys admob
     @LocalStorage(key: "admob_banner", value: "ca-app-pub-2299291161271404/9102730363")
