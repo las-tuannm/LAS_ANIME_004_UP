@@ -16,6 +16,9 @@ target 'Tanqin' do
   pod 'ReachabilitySwift'
   pod 'MJRefresh'
   pod 'lottie-ios'
+  pod 'CRRefresh'
+  pod 'Zip'
+  pod 'SwiftMessages'
   
   # Applovin mediation
   pod 'AppLovinSDK'
