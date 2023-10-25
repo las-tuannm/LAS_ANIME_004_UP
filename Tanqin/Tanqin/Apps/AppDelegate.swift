@@ -38,6 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func awakeAds() {
+#if DEBUG
+        AdmobController.shared.idsTest = []
+#endif
+        
         AdmobController.shared.awake {
             AdmobOpenController.shared.awake()
         }
