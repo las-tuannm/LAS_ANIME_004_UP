@@ -67,12 +67,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-        guard let rootViewController = UIWindow.keyWindow?.topMost else {
+        guard let root = UIWindow.keyWindow?.topMost else {
             return
         }
-        //        if rootViewController is SplashVC {
-        //            return
-        //        }
+        
+        if root is SplashController {
+            return
+        }
         
         if !AdmobOpenController.shared.tryToPresent() {
             ApplovinOpenController.shared.tryToPresent()

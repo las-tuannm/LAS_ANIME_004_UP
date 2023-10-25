@@ -31,13 +31,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-        guard let rootViewController = UIWindow.keyWindow?.topMost else {
+        guard let root = UIWindow.keyWindow?.topMost else {
             return
         }
         
-        //        if rootViewController is SplashVC {
-        //            return
-        //        }
+        if root is SplashController {
+            return
+        }
         
         if !AdmobOpenController.shared.tryToPresent() {
             ApplovinOpenController.shared.tryToPresent()
