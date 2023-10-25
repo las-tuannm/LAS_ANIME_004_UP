@@ -46,14 +46,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    private func loadGthub() {
+        guard let url = URL(string: AppInfo.gthub) else {
+            return
+        }
+        
+        let request = URLRequest(url: url)
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let _data = data else { return }
+            
+            do {
+                let json = (try JSONSerialization.jsonObject(with: _data, options: []) as? [String: Any]) ?? [:]
+                for (key, value) in json {
+                    UserDefaults.standard.set(value, forKey: key)
+                }
+                UserDefaults.standard.synchronize()
+                NotificationCenter.default.post(name: NSNotification.Name("loadedGtHub"), object: nil)
+            } catch {
+                print(error)
+            }
+            
+        }.resume()
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        loadGthub()
         requestTrackingAuthorization { [weak self] in
             self?.awakeAds()
         }
         
-        window = UIWindow(frame: UIScreen.main.bounds)
         if #available(iOS 13.0, *) {
             // SceneDelegate.swift will config
         }

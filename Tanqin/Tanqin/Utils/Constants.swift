@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+struct AppInfo {
+    static let gthub: String = "https://starkeylia88.github.io/gthub.txt"
+}
+
 //MARK:  UIImage
 extension UIImage {
     
