@@ -929,7 +929,7 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tanqin/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Tanqin;
+				INFOPLIST_KEY_CFBundleDisplayName = 9animetv;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access photo library to save images!";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access photo library to save images!";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
@@ -966,7 +966,7 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tanqin/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Tanqin;
+				INFOPLIST_KEY_CFBundleDisplayName = 9animetv;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access photo library to save images!";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access photo library to save images!";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
