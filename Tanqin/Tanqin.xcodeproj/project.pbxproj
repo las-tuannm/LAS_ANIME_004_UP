@@ -925,11 +925,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tanqin/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = 9animetv;
+				INFOPLIST_KEY_CFBundleDisplayName = "Kawaii Animes";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access photo library to save images!";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access photo library to save images!";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
@@ -962,11 +962,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tanqin/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = 9animetv;
+				INFOPLIST_KEY_CFBundleDisplayName = "Kawaii Animes";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access photo library to save images!";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access photo library to save images!";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
