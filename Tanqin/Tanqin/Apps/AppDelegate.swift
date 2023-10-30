@@ -14,12 +14,12 @@ import AdSupport
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var observer: Any?
+    var id: Any?
     var window: UIWindow?
     
     private func requestTrackingAuthorization(completion: @escaping () -> Void) {
         if #available(iOS 14, *) {
-            observer = NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: .main, using: { [weak self] _ in
+            id = NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: .main, using: { [weak self] _ in
                 
                 guard let self = self else { return }
                 
@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     DispatchQueue.main.async { completion() }
                 }
                 
-                self.observer.flatMap {
+                self.id.flatMap {
                     NotificationCenter.default.removeObserver($0)
                 }
             })
