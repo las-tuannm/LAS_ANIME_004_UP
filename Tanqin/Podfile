@@ -13,12 +13,14 @@ target 'Tanqin' do
   pod 'SDWebImage'
   pod 'Alamofire'
   pod "pop"
+  pod 'CryptoSwift'
   pod 'ReachabilitySwift'
   pod 'MJRefresh'
   pod 'lottie-ios'
   pod 'CRRefresh'
   pod 'Zip'
   pod 'SwiftMessages'
+  pod 'SwiftSoup'
   
   # Applovin mediation
   pod 'AppLovinSDK'
