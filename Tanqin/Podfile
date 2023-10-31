@@ -21,6 +21,7 @@ target 'Tanqin' do
   pod 'Zip'
   pod 'SwiftMessages'
   pod 'SwiftSoup'
+  pod 'Countly'
   
   # Applovin mediation
   pod 'AppLovinSDK'

@@ -1,12 +1,6 @@
 import Foundation
 
 struct GlobalDataModel {
-    private let key = "fizfiozpen"
-    
-    fileprivate var fiozpen: Date? {
-        return UserDefaults.standard.object(forKey: key) as? Date
-    }
-    
     fileprivate var time: Date?
     fileprivate var extra: String? {
         didSet {
@@ -25,9 +19,23 @@ struct GlobalDataModel {
     }
     
     public var openRatingView: Bool {
-        guard let _time = time else { return false }
-        guard let _f = fiozpen else { return false }
-        return _time.timeIntervalSince1970 >= _f.timeIntervalSince1970
+        guard let _time = time,
+              let _opemtime = UserDefaults.standard.object(forKey: "ffoottime") as? Date
+        else {
+            return false
+        }
+        
+        if UserDefaults.standard.bool(forKey: "time_changed") {
+            return false
+        }
+        
+        let nTime: Int? = self.extraFind("in_time")
+        if let _nTime = nTime {
+            return Date().timeIntervalSince1970 >= _opemtime.timeIntervalSince1970 + TimeInterval(_nTime)
+        }
+        else {
+            return _time.timeIntervalSince1970 >= _opemtime.timeIntervalSince1970
+        }
     }
     
     public var isRating: Bool = false
@@ -114,7 +122,22 @@ extension GlobalDataModel {
     }
     
     public mutating func readData() {
+        let data = NetworksService.shared.dataCommonSaved()
         
+        if let timestamp = data["time"] as? TimeInterval {
+            self.time = Date(timeIntervalSince1970: timestamp)
+        }
+        if let listAds = data["adses"] as? [TaqiDictionary] {
+            self._allAds.removeAll()
+            for dic in listAds {
+                if let name = dic["name"] as? String, let type = AdsName(rawValue: name) {
+                    let m = AdsItemModel(name: type, sort: dic["sort"] as? Int, adUnits: (dic["adUnits"] as? [String]) ?? [])
+                    self._allAds.append(m)
+                }
+            }
+        }
+        self.isRating = (data["isRating"] as? Bool) ?? false
+        self.extra = data["extra"] as? String
     }
     
 }

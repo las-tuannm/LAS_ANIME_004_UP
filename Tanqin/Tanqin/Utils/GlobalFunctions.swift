@@ -14,20 +14,6 @@ func asynAfter(_ time: Double, completion:@escaping (() -> Void)) {
     }
 }
 
-func getWindow() -> UIWindow? {
-    if #available(iOS 13.0, *) {
-        let sceneDelegate = UIApplication.shared.connectedScenes
-            .first?.delegate as? SceneDelegate
-        return sceneDelegate?.window
-
-    
-    } else {
-        // UIApplication.shared.keyWindow?.rootViewController
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        return appDelegate?.window
-    }
-}
-
 func openAppPageInAppStore(appID: String, forReview: Bool) {
     var urlStr = "https://itunes.apple.com/app/id\(appID)"
     
@@ -73,4 +59,24 @@ func isLightColor(brightness: CGFloat, saturation: CGFloat) -> Bool {
 
 func isIpadScreen() -> Bool {
     return UIDevice.current.userInterfaceIdiom == .pad
+}
+
+func widthForLabel(text:String, font:UIFont, height:CGFloat) -> CGFloat{
+    let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: CGFloat.greatestFiniteMagnitude, height: height))
+    label.numberOfLines = 0
+    label.lineBreakMode = NSLineBreakMode.byWordWrapping
+    label.font = font
+    label.text = text
+    label.sizeToFit()
+    return label.frame.width
+}
+
+func heightForLabel(text:String, font:UIFont, width:CGFloat, numberLine: Int) -> CGFloat{
+    let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+    label.numberOfLines = numberLine
+    label.lineBreakMode = NSLineBreakMode.byWordWrapping
+    label.font = font
+    label.text = text
+    label.sizeToFit()
+    return label.frame.height
 }

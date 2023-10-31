@@ -86,6 +86,21 @@ extension UIWindow {
         
         return nil
     }
+    
+    var mainTabbar1: TabBarVC? {
+        if let navi = topMost as? BaseNavigationController {
+            for item in navi.viewControllers {
+                if let tab = item as? TabBarVC {
+                    return tab
+                }
+            }
+        }
+        else if let tab = topMost as? TabBarVC {
+            return tab
+        }
+        
+        return nil
+    }
 }
 
 public extension Array where Element: Equatable {
