@@ -85,6 +85,7 @@
 		5B0AEEE52AF0AE9200166CAD /* MuTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AEEE42AF0AE9200166CAD /* MuTextField.swift */; };
 		5B0AEEE72AF0B55B00166CAD /* TaqService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AEEE62AF0B55B00166CAD /* TaqService.swift */; };
 		5B0AEEE92AF0BAD700166CAD /* TaqPlayerMediaTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AEEE82AF0BAD700166CAD /* TaqPlayerMediaTrack.swift */; };
+		5B1CE91E2AF22C90007B6034 /* anime_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CE91D2AF22C90007B6034 /* anime_loading.json */; };
 		5B50BA972AF0A352007798A6 /* NetworksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B50BA902AF0A352007798A6 /* NetworksService.swift */; };
 		5B50BA982AF0A352007798A6 /* TaqAESObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B50BA912AF0A352007798A6 /* TaqAESObject.swift */; };
 		5B50BA992AF0A352007798A6 /* TaqJSCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B50BA922AF0A352007798A6 /* TaqJSCore.swift */; };
@@ -310,6 +311,7 @@
 		5B0AEEE42AF0AE9200166CAD /* MuTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuTextField.swift; sourceTree = "<group>"; };
 		5B0AEEE62AF0B55B00166CAD /* TaqService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaqService.swift; sourceTree = "<group>"; };
 		5B0AEEE82AF0BAD700166CAD /* TaqPlayerMediaTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaqPlayerMediaTrack.swift; sourceTree = "<group>"; };
+		5B1CE91D2AF22C90007B6034 /* anime_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = anime_loading.json; sourceTree = "<group>"; };
 		5B50BA902AF0A352007798A6 /* NetworksService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworksService.swift; sourceTree = "<group>"; };
 		5B50BA912AF0A352007798A6 /* TaqAESObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaqAESObject.swift; sourceTree = "<group>"; };
 		5B50BA922AF0A352007798A6 /* TaqJSCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaqJSCore.swift; sourceTree = "<group>"; };
@@ -706,6 +708,7 @@
 		33CDB12A2ACEA44A0080B1FD /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				5B1CE91D2AF22C90007B6034 /* anime_loading.json */,
 				5B706F6E2AE66656002133AF /* loadingT.json */,
 				33CDB12B2ACEA44A0080B1FD /* BalooBhaina2-Bold.ttf */,
 				33CDB12C2ACEA44A0080B1FD /* BalooBhaina2-Regular.ttf */,
@@ -1100,6 +1103,7 @@
 				33CDB0A12ACE94900080B1FD /* Resources */,
 				1576BFF046075C2E631EBF25 /* [CP] Embed Pods Frameworks */,
 				AF49EACF6764BE1479554C0C /* [CP] Copy Pods Resources */,
+				5B7AFF552AF206C600DB5587 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1157,6 +1161,7 @@
 				33CDB1192ACE98030080B1FD /* QuoteOfDayViewController.xib in Resources */,
 				33CDB0B02ACE94930080B1FD /* Assets.xcassets in Resources */,
 				33F39AA02AD79B9E00F67B7F /* DetailFanArtViewController.xib in Resources */,
+				5B1CE91E2AF22C90007B6034 /* anime_loading.json in Resources */,
 				33F9BCAC2AD3BC1D00BA1489 /* ArtItemCell.xib in Resources */,
 				5BE2BB1D2AF0A5780054E2B0 /* suti.json in Resources */,
 				33CDB1212ACE981D0080B1FD /* FanArtViewController.xib in Resources */,
@@ -1215,6 +1220,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5B7AFF552AF206C600DB5587 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COUNTLY_DSYM_UPLOADER=$(/usr/bin/find $SRCROOT -name \"countly_dsym_uploader.sh\" | head -n 1)\nsh \"$COUNTLY_DSYM_UPLOADER\" \"https://countlytics.info\" \"e0baf3c0aded193274323a0d2f72d0f9d6c89beb\"\n";
 		};
 		AF49EACF6764BE1479554C0C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1599,7 +1621,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taqpin.ahlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1636,7 +1658,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.taqpin.ahlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

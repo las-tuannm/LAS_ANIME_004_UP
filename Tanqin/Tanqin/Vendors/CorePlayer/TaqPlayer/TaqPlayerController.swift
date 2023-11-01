@@ -37,7 +37,7 @@ class TaqPlayerController: UIViewController {
     
     static func makeController() -> TaqPlayerController {
         let bundle = Bundle(for: Self.self)
-        let playerTrailer = TaqPlayerController(nibName: "AniController", bundle: bundle)
+        let playerTrailer = TaqPlayerController(nibName: "TaqController", bundle: bundle)
         playerTrailer.modalPresentationStyle = .fullScreen
         return playerTrailer
     }
