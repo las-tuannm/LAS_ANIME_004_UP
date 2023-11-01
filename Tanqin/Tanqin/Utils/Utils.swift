@@ -45,3 +45,34 @@ class Utils {
         return thumbnailImage
     }
 }
+
+public func readString(fileName: String) -> String? {
+    do {
+        if let documentDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first {
+            let fileURL = documentDirectory.appendingPathComponent(fileName)
+            if !FileManager.default.fileExists(atPath: fileURL.absoluteString){
+                FileManager.default.createFile(atPath: fileURL.absoluteString, contents: nil, attributes: nil)
+            }
+            let savedText = try String(contentsOf: fileURL)
+            return savedText
+        }
+        return nil
+    } catch {
+        return nil
+    }
+}
+
+public func writeString(aString: String, fileName: String) {
+    do {
+        
+        if let documentDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first {
+            let fileURL = documentDirectory.appendingPathComponent(fileName)
+            if !FileManager.default.fileExists(atPath: fileURL.absoluteString){
+                FileManager.default.createFile(atPath: fileURL.absoluteString, contents: nil, attributes: nil)
+            }
+            try aString.write(to: fileURL, atomically: false, encoding: .utf8)
+        }
+    } catch {
+        print("\(error)")
+    }
+}

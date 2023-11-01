@@ -77,7 +77,7 @@ class ApplovinOpenController: NSObject {
                let rootController = window.topMost,
                let presented = rootController.presentedViewController
             {
-//                if presented is AniPlayerController {
+//                if presented is TaqPlayerController {
 //                    return false
 //                }
             }

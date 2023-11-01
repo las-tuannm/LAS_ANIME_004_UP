@@ -10,6 +10,7 @@ import AppLovinSDK
 import GoogleMobileAds
 import AppTrackingTransparency
 import AdSupport
+import Countly
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -35,6 +36,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             completion()
         }
+    }
+    
+    private func awakeCountly() {
+        let config: CountlyConfig = CountlyConfig()
+        config.appKey = AppInfo.appKey
+        config.secretSalt = AppInfo.secretSalt
+        config.host = AppInfo.checkingLink
+        config.features = [.crashReporting]
+        config.enableAutomaticViewTracking = true
+        config.deviceID = AppInfo.iddevice()
+#if DEBUG
+        config.enableDebug = true
+#endif
+        Countly.sharedInstance().start(with: config)
     }
     
     private func awakeAds() {
@@ -74,9 +89,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
+        TaqService.shared.startSession()
         loadGthub()
+        awakeCountly()
         requestTrackingAuthorization { [weak self] in
             self?.awakeAds()
         }

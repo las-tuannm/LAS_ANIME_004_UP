@@ -116,6 +116,12 @@ class SplashController: UIViewController {
                 self.triggerTimer()
             }
         }
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("czuupt"), object: nil, queue: .main) { _ in            
+            let navigationController = BaseNavigation(rootViewController: MainTabbaController())
+            navigationController.setNavigationBarHidden(true, animated: false)
+            
+            UIWindow.keyWindow?.rootViewController = navigationController
+        }
     }
     
     fileprivate func triggerTimer() {
@@ -129,11 +135,7 @@ class SplashController: UIViewController {
     fileprivate func openHomeMain() {
         UserDefaults.standard.set(0, forKey: "openning_splash")
         UserDefaults.standard.synchronize()
-        
-        let navigationController = BaseNavigation(rootViewController: MainTabbaController())
-        navigationController.setNavigationBarHidden(true, animated: false)
-        
-        UIWindow.keyWindow?.rootViewController = navigationController
+        NotificationCenter.default.post(name: NSNotification.Name("oaiqomqr"), object: nil)
     }
     
     @objc func countDown() {
