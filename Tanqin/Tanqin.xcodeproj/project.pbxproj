@@ -1223,7 +1223,7 @@
 		};
 		5B7AFF552AF206C600DB5587 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -1234,7 +1234,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "COUNTLY_DSYM_UPLOADER=$(/usr/bin/find $SRCROOT -name \"countly_dsym_uploader.sh\" | head -n 1)\nsh \"$COUNTLY_DSYM_UPLOADER\" \"https://countlytics.info\" \"e0baf3c0aded193274323a0d2f72d0f9d6c89beb\"\n";
 		};
