@@ -454,17 +454,11 @@ extension HTMLService {
 }
 
 extension HTMLService {
-    func getSourceAnime() -> SourceAnime{
-        
-        if GlobalDataModel.shared.extraFind("source_anime") == nil {
-            return .aniware
+    func getSourceAnime() -> SourceAnime {
+        if let source = UserDefaults.standard.string(forKey: "source_anime"), source == "9anime" {
+            return .anime9
         } else {
-            let source: String = GlobalDataModel.shared.extraFind("source_anime")!
-            if source == "9anime" {
-                return .anime9
-            } else {
-                return .aniware
-            }
+            return .aniware
         }
     }
     
