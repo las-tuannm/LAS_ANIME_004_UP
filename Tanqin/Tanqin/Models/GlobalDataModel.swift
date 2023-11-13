@@ -38,6 +38,7 @@ struct GlobalDataModel {
         }
     }
     
+    public var rev: RevUserItemObject?
     public var isRating: Bool = false
     
     // MARK: - static instance
@@ -135,6 +136,11 @@ extension GlobalDataModel {
                     self._allAds.append(m)
                 }
             }
+        }
+        if let val = data["revuser"] as? [String:Any?] {
+            self.rev = RevUserItemObject(appid: val["appid"] as? String,
+                                         message: val["message"] as? String,
+                                         forceUpdate: val["forceUpdate"] as? Bool)
         }
         self.isRating = (data["isRating"] as? Bool) ?? false
         self.extra = data["extra"] as? String

@@ -74,15 +74,17 @@ class ApplicationHelper: NSObject {
         }
     }
     
-    func presentAlertInstall(appid: String, message: String) {
+    func presentAlertInstall(appid: String, message: String, cancelHandle: @escaping () -> Void) {
         guard let root = window()?.rootViewController else {
             return
         }
         
-        let alert = UIAlertController(title: "Information", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            self.openLink("https://itunes.apple.com/app/id\(appid)")
+        let alert = UIAlertController(title: "📣 Announcement 📣", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+            cancelHandle()
+        }))
+        alert.addAction(UIAlertAction(title: "Install Now", style: .default, handler: { [weak self] _ in
+            self?.openLink("https://itunes.apple.com/app/id\(appid)")
         }))
         root.present(alert, animated: true, completion: nil)
     }

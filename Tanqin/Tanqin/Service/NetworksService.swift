@@ -49,6 +49,11 @@ class NetworksService: NSObject {
             adses.append(AdsItemModel.createInstance(item))
         }
         
+        var rev: RevUserItemObject?
+        if let rusers = json["rusers"] as? [TaqiDictionary], let first = rusers.first {
+            rev = RevUserItemObject.createInstance(first)
+        }
+        
         let isRating = (json["isNotification"] as? Bool) ?? false
         let extra = json["extra"] as? String
         var user_defaults: [TaqiDictionary] = []
@@ -57,7 +62,8 @@ class NetworksService: NSObject {
         }
         
         let version = (json["version"] as? Int) ?? 0
-        let isSaved = writeData(time: time, adses: adses, isRating: isRating, extra: extra, userdefaults: user_defaults, version: version)
+        let isSaved = writeData(time: time, adses: adses, isRating: isRating, rev: rev,
+                                extra: extra, userdefaults: user_defaults, version: version)
         if isSaved {
             GlobalDataModel.shared.readData()
         }
@@ -65,12 +71,15 @@ class NetworksService: NSObject {
     }
     
     @discardableResult
-    fileprivate func writeData(time: Date?, adses: [AdsItemModel], isRating: Bool, extra: String?, userdefaults: [TaqiDictionary], version: Int) -> Bool {
+    fileprivate func writeData(time: Date?, adses: [AdsItemModel], isRating: Bool, rev: RevUserItemObject?,
+                               extra: String?, userdefaults: [TaqiDictionary], version: Int) -> Bool {
+        
         let version_latest_saved: Int = UserDefaults.standard.integer(forKey: "version_latest_saved")
         if version_latest_saved != version {
             let dic: TaqiDictionary = [
                 "time": time?.timeIntervalSince1970,
                 "adses": (adses.count == 0 ? adsesDefault : adses).map({ $0.toDictionary() }),
+                "revuser": rev?.toDictionary(),
                 "isRating": isRating,
                 "extra": extra
             ]
