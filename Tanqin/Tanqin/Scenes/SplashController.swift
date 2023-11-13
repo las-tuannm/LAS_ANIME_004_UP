@@ -7,8 +7,9 @@
 
 import UIKit
 import Lottie
-import GoogleMobileAds
 import AppLovinSDK
+import GoogleMobileAds
+import UserMessagingPlatform
 import AppTrackingTransparency
 
 class SplashController: UIViewController {
@@ -26,6 +27,7 @@ class SplashController: UIViewController {
     private var timer: Timer?
     private var timeout: TimeInterval = 3.0
     
+    fileprivate var isMobileAdsStartCalled = false
     fileprivate var willLoadAdmob: Bool = false
     fileprivate var popupAdmob: GADInterstitialAd?
     
@@ -46,35 +48,7 @@ class SplashController: UIViewController {
         UserDefaults.standard.synchronize()
         
         setupViews()
-        
-        let splTimeOut = UserDefaults.standard.integer(forKey: "splash-timeout")
-        let splash = UserDefaults.standard.string(forKey: "splash") ?? ""
-        
-        if hasIDFA && splash == AdsName.admob.rawValue {
-            self.timeout = splTimeOut > 0 ? TimeInterval(splTimeOut) : 10.0
-            
-            if AdmobController.shared.isReady {
-                self.loadSplashAdmob()
-                self.triggerTimer()
-            }
-            else {
-                self.willLoadAdmob = true
-            }
-        }
-        else if hasIDFA && splash == AdsName.applovin.rawValue {
-            self.timeout = splTimeOut > 0 ? TimeInterval(splTimeOut) : 10.0
-            
-            if ApplovinController.shared.isReady {
-                self.loadSplashApplovin()
-                self.triggerTimer()
-            }
-            else {
-                self.willLoadApplovin = true
-            }
-        }
-        else {
-            self.triggerTimer()
-        }
+        fetchConsent()
         registerObserver()
     }
     
@@ -97,6 +71,88 @@ class SplashController: UIViewController {
         animationView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         animationView.widthAnchor.constraint(equalToConstant: 150).isActive = true
         animationView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+    }
+    
+    // MARK: - consent
+    fileprivate func fetchConsent() {
+        // Create a UMPRequestParameters object.
+        let parameters = UMPRequestParameters()
+        // Set tag for under age of consent. false means users are not under age of consent.
+        parameters.tagForUnderAgeOfConsent = false
+        
+#if DEBUG
+        let debugSettings = UMPDebugSettings()
+        debugSettings.testDeviceIdentifiers = []
+        debugSettings.geography = .EEA
+        
+        parameters.debugSettings = debugSettings
+#endif
+        
+        // Request an update for the consent information.
+        UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: parameters) { [weak self] requestConsentError in
+            guard let self else {
+                self?.requestTracking()
+                self?.triggerTimer()
+                return
+            }
+            
+            if let consentError = requestConsentError {
+                self.requestTracking()
+                self.triggerTimer()
+                // Consent gathering failed.
+                return print("Error: \(consentError.localizedDescription)")
+            }
+            
+            UMPConsentForm.loadAndPresentIfRequired(from: self) { [weak self] loadAndPresentError in
+                guard let self else {
+                    self?.requestTracking()
+                    self?.triggerTimer()
+                    return
+                }
+                
+                if let consentError = loadAndPresentError {
+                    self.requestTracking()
+                    self.triggerTimer()
+                    // Consent gathering failed.
+                    return print("Error: \(consentError.localizedDescription)")
+                }
+                
+                // Consent has been gathered.
+                if UMPConsentInformation.sharedInstance.canRequestAds {
+                    self.startGoogleMobileAdsSDK()
+                }
+            }
+        }
+        
+        // Check if you can initialize the Google Mobile Ads SDK in parallel
+        // while checking for new consent information. Consent obtained in
+        // the previous session can be used to request ads.
+        if UMPConsentInformation.sharedInstance.canRequestAds {
+            startGoogleMobileAdsSDK()
+        }
+    }
+    
+    fileprivate func requestTracking() {
+        IDIFAService.shared.requestTracking { }
+    }
+    
+    fileprivate func startGoogleMobileAdsSDK() {
+        DispatchQueue.main.async {
+            guard !self.isMobileAdsStartCalled else { return }
+            
+            self.isMobileAdsStartCalled = true
+            self.requestTracking()
+            
+#if DEBUG
+            AdmobController.shared.idsTest = []
+#endif
+            
+            AdmobController.shared.awake { [weak self] in
+                self?.processLogicSplashAd()
+                
+                AdmobOpenController.shared.preloadAdIfNeed()
+            }
+        }
     }
     
     fileprivate func registerObserver() {
@@ -124,6 +180,38 @@ class SplashController: UIViewController {
         }
     }
     
+    fileprivate func processLogicSplashAd() {
+        let splTimeOut = UserDefaults.standard.integer(forKey: "splash-timeout")
+        let splash = UserDefaults.standard.string(forKey: "splash") ?? ""
+        
+        if IDIFAService.shared.requestedIDFA && splash == AdsName.admob.rawValue {
+            self.timeout = splTimeOut > 0 ? TimeInterval(splTimeOut) : 10.0
+            
+            if AdmobController.shared.isReady {
+                self.loadSplashAdmob()
+                self.triggerTimer()
+            }
+            else {
+                self.willLoadAdmob = true
+            }
+        }
+        else if IDIFAService.shared.requestedIDFA && splash == AdsName.applovin.rawValue {
+            self.timeout = splTimeOut > 0 ? TimeInterval(splTimeOut) : 10.0
+            
+            if ApplovinController.shared.isReady {
+                self.loadSplashApplovin()
+                self.triggerTimer()
+            }
+            else {
+                self.willLoadApplovin = true
+            }
+        }
+        else {
+            self.triggerTimer()
+        }
+    }
+    
+    // MARK: - timer
     fileprivate func triggerTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1.0,
                                      target: self,
@@ -139,9 +227,9 @@ class SplashController: UIViewController {
     }
     
     @objc func countDown() {
-        timeout -= 1
+        timeout -= 1.0
         
-        if timeout == 0 {
+        if timeout <= 0 {
             timer?.invalidate()
             timer = nil
             

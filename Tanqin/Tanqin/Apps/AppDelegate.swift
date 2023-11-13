@@ -8,35 +8,13 @@
 import UIKit
 import AppLovinSDK
 import GoogleMobileAds
-import AppTrackingTransparency
 import AdSupport
 import Countly
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var id: Any?
     var window: UIWindow?
-    
-    private func requestTrackingAuthorization(completion: @escaping () -> Void) {
-        if #available(iOS 14, *) {
-            id = NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: .main, using: { [weak self] _ in
-                
-                guard let self = self else { return }
-                
-                ATTrackingManager.requestTrackingAuthorization { _ in
-                    DispatchQueue.main.async { completion() }
-                }
-                
-                self.id.flatMap {
-                    NotificationCenter.default.removeObserver($0)
-                }
-            })
-        }
-        else {
-            completion()
-        }
-    }
     
     private func awakeCountly() {
         let config: CountlyConfig = CountlyConfig()
@@ -53,13 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func awakeAds() {
-#if DEBUG
-        AdmobController.shared.idsTest = []
-#endif
-        
-        AdmobController.shared.awake {
-            AdmobOpenController.shared.awake()
-        }
         ApplovinController.shared.awake {
             ApplovinOpenController.shared.awake()
         }
@@ -93,9 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         TaqService.shared.startSession()
         loadGthub()
         awakeCountly()
-        requestTrackingAuthorization { [weak self] in
-            self?.awakeAds()
-        }
+        awakeAds()
         
         if #available(iOS 13.0, *) {
             // SceneDelegate.swift will config

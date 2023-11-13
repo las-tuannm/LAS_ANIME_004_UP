@@ -221,6 +221,7 @@
 		5BE2BB792AF0AB9B0054E2B0 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2BB762AF0AB9B0054E2B0 /* StarView.swift */; };
 		5BE2BB7A2AF0AB9B0054E2B0 /* StarBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2BB772AF0AB9B0054E2B0 /* StarBezier.swift */; };
 		5BE2BB7B2AF0AB9B0054E2B0 /* StarGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2BB782AF0AB9B0054E2B0 /* StarGestures.swift */; };
+		5BF583B02B01CD2200C2B93D /* IDIFAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF583AF2B01CD2200C2B93D /* IDIFAService.swift */; };
 		7C747E2DEA8076E10A2A4934 /* Pods_Tanqin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31F258D32C5A85A8E008F16 /* Pods_Tanqin.framework */; };
 		CBAD60922AE11E13009F68CE /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAD608E2AE11E12009F68CE /* BaseCollectionViewController.swift */; };
 		CBAD60932AE11E13009F68CE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAD608F2AE11E12009F68CE /* BaseViewController.swift */; };
@@ -447,6 +448,7 @@
 		5BE2BB762AF0AB9B0054E2B0 /* StarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
 		5BE2BB772AF0AB9B0054E2B0 /* StarBezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarBezier.swift; sourceTree = "<group>"; };
 		5BE2BB782AF0AB9B0054E2B0 /* StarGestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarGestures.swift; sourceTree = "<group>"; };
+		5BF583AF2B01CD2200C2B93D /* IDIFAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDIFAService.swift; sourceTree = "<group>"; };
 		CBAD608E2AE11E12009F68CE /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
 		CBAD608F2AE11E12009F68CE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CBAD60902AE11E12009F68CE /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -652,6 +654,7 @@
 				33CDB1062ACE95A70080B1FD /* GithubService.swift */,
 				33CDB1082ACE95A70080B1FD /* BaseService.swift */,
 				33CDB1092ACE95A70080B1FD /* EndPoint.swift */,
+				5BF583AF2B01CD2200C2B93D /* IDIFAService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1457,6 +1460,7 @@
 				5BE2BAFC2AF0A5780054E2B0 /* HomeTopAniware.swift in Sources */,
 				5BD4DC8A2AE51BF900454F6E /* GlobalDataModel.swift in Sources */,
 				5BE2BB7A2AF0AB9B0054E2B0 /* StarBezier.swift in Sources */,
+				5BF583B02B01CD2200C2B93D /* IDIFAService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
