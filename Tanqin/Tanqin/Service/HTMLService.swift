@@ -139,13 +139,26 @@ extension HTMLService {
                                    quality: quality,
                                    sub: sub,
                                    eps: eps)
-                result.append(ani)
+                
+                if self.isAvailable(enName) {
+                    result.append(ani)
+                }
             }
             
         } catch {
             logDebug(error)
         }
         return result
+    }
+    
+    fileprivate func isAvailable(_ name: String) -> Bool {
+        let tmp = GlobalDataModel.shared.nameNotAvailable()
+        for it in tmp {
+            if name.lowercased().contains(it) {
+                return false
+            }
+        }
+        return true
     }
 }
 
@@ -188,7 +201,10 @@ extension HTMLService {
                                    sub: sub,
                                    eps: eps)
                 ani.view = view
-                result.append(ani)
+                
+                if self.isAvailable(name) {
+                    result.append(ani)
+                }
             }
         } catch {
             logDebug(error)
@@ -220,7 +236,10 @@ extension HTMLService {
                                    quality: "",
                                    sub: "",
                                    eps: "")
-                trending.append(ani)
+                
+                if self.isAvailable(name) {
+                    trending.append(ani)
+                }
             }
         } catch {
             logDebug(error)
@@ -253,7 +272,10 @@ extension HTMLService {
                                    quality: quality,
                                    sub: sub,
                                    eps: eps)
-                recently.append(ani)
+                
+                if self.isAvailable(enName) {
+                    recently.append(ani)
+                }
             }
             
         } catch {

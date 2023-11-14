@@ -109,13 +109,26 @@ class AnWHTMLService: NSObject {
                 ani.dub = dub
                 ani.type = type
                 ani.rate = rate
-                result.append(ani)
+                
+                if self.isAvailable(enName) {
+                    result.append(ani)
+                }
             }
             
         } catch {
             logDebug(error)
         }
         return result
+    }
+    
+    fileprivate func isAvailable(_ name: String) -> Bool {
+        let tmp = GlobalDataModel.shared.nameNotAvailable()
+        for it in tmp {
+            if name.lowercased().contains(it) {
+                return false
+            }
+        }
+        return true
     }
     
     // MARK: - public
@@ -164,7 +177,10 @@ extension AnWHTMLService {
                                    eps: eps)
                 ani.dub = dub
                 ani.type = type
-                result.append(ani)
+                
+                if self.isAvailable(enName) {
+                    result.append(ani)
+                }
             }
         } catch {
             logDebug(error)
@@ -213,7 +229,10 @@ extension AnWHTMLService {
                                    quality: quality,
                                    sub: sub,
                                    eps: "")
-                trending.append(ani)
+                
+                if self.isAvailable(enName) {
+                    trending.append(ani)
+                }
             }
         } catch {
             logDebug(error)
@@ -252,7 +271,10 @@ extension AnWHTMLService {
                                    eps: eps)
                 ani.dub = dub
                 ani.type = type
-                recently.append(ani)
+                
+                if self.isAvailable(enName) {
+                    recently.append(ani)
+                }
             }
             
         } catch {
@@ -472,7 +494,9 @@ extension AnWHTMLService {
                                    quality: "", sub: "", eps: "",
                                    view: ssView, type: ssType)
                 
-                suggestion?.append(sug)
+                if self.isAvailable(ssEnName) {
+                    suggestion?.append(sug)
+                }
             }
             
             var season: [AniSeasonModel] = []

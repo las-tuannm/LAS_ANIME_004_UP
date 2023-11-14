@@ -122,6 +122,13 @@ extension GlobalDataModel {
         return self.adsAvailableFor(unit).contains(where: { $0.name == name })
     }
     
+    func nameNotAvailable() -> [String] {
+        if let co = (extraJSON ?? [:])["coopyright"] as? [String] {
+            return co.map { $0.lowercased() }
+        }
+        return []
+    }
+    
     public mutating func readData() {
         let data = NetworksService.shared.dataCommonSaved()
         
